@@ -1,0 +1,1419 @@
+{
+    "data": {
+        "kota": {
+            "banyuwangi" : {
+                "stasiun" : [
+                    {
+                        "nama" : "banyuwangibaru",
+                        "kode" : "BW"
+                    },
+                    {
+                        "nama" : "glenmore",
+                        "kode" : "GLM"
+                    },
+                    {
+                        "nama" : "kalibaru",
+                        "kode" : "KBR"
+                    },
+                    {
+                        "nama" : "kalisetail",
+                        "kode" : "KSL"
+                    },
+                    {
+                        "nama" : "karangasem",
+                        "kode" : "KNE"
+                    },
+                    {
+                        "nama" : "rogojampi",
+                        "kode" : "RGP"
+                    },
+                    {
+                        "nama" : "sumberwadung",
+                        "kode" : "SWD"
+                    },
+                    {
+                        "nama" : "temuguruh",
+                        "kode" : "TGR"
+                    }
+                ]
+            },
+            "bekasi" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bekasi",
+                        "kode" : "BKS"
+                    }
+                ]
+            },
+            "batang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "batang",
+                        "kode" : "BTG"
+                    },
+                    {
+                        "nama" : "ujungnegoro",
+                        "kode" : "UJN"
+                    }
+                ]
+            },
+            "baturaja" : {
+                "stasiun" : [
+                    {
+                        "nama" : "baturaja",
+                        "kode" : "BTA"
+                    },
+                    {
+                        "nama" : "paninjawan",
+                        "kode" : "PNW"
+                    }
+                ]
+            },
+            "binjai" : {
+                "stasiun" : [
+                    {
+                        "nama" : "binjai",
+                        "kode" : "BIJ"
+                    }
+                ]
+            },
+            "banjar" : {
+                "stasiun" : [
+                    {
+                        "nama" : "banjar",
+                        "kode" : "BJR"
+                    },
+                    {
+                        "nama" : "langen",
+                        "kode" : "LN"
+                    }
+                ]
+            },
+            "blora" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cepu",
+                        "kode" : "CU"
+                    },
+                    {
+                        "nama" : "doplang",
+                        "kode" : "DPL"
+                    },
+                    {
+                        "nama" : "randublatung",
+                        "kode" : "RBG"
+                    }
+                ]
+            },
+            "cilacap" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cilacap",
+                        "kode" : "CP"
+                    },
+                    {
+                        "nama" : "cipari",
+                        "kode" : "CPI"
+                    },
+                    {
+                        "nama" : "gandrungmangun",
+                        "kode" : "GDM"
+                    },
+                    {
+                        "nama" : "gumilir",
+                        "kode" : "GM"
+                    },
+                    {
+                        "nama" : "jeruklegi",
+                        "kode" : "JRL"
+                    },
+                    {
+                        "nama" : "kawunganten",
+                        "kode" : "KWG"
+                    },
+                    {
+                        "nama" : "kroya",
+                        "kode" : "KYA"
+                    },
+                    {
+                        "nama" : "lebeng",
+                        "kode" : "LBG"
+                    },
+                    {
+                        "nama" : "maos",
+                        "kode" : "MA"
+                    },
+                    {
+                        "nama" : "meluwung",
+                        "kode" : "MLW"
+                    },
+                    {
+                        "nama" : "sidareja",
+                        "kode" : "SDR"
+                    },
+                    {
+                        "nama" : "sikampuh",
+                        "kode" : "SKP"
+                    }
+                ]
+            },
+            "cilegon" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cilegon",
+                        "kode" : "CLG"
+                    },
+                    {
+                        "nama" : "merak",
+                        "kode" : "MER"
+                    }
+                ]
+            },
+            "cirebon" : {
+                "stasiun" : [
+                    {
+                        "nama" : "arjawinangun",
+                        "kode" : "AWN"
+                    },
+                    {
+                        "nama" : "babakan",
+                        "kode" : "BBK"
+                    },
+                    {
+                        "nama" : "ciledug",
+                        "kode" : "CLD"
+                    },
+                    {
+                        "nama" : "cirebon",
+                        "kode" : "CN"
+                    },
+                    {
+                        "nama" : "cirebonprujakan",
+                        "kode" : "CNP"
+                    },
+                    {
+                        "nama" : "karangsuwung",
+                        "kode" : "KRW"
+                    },
+                    {
+                        "nama" : "losari",
+                        "kode" : "LOS"
+                    },
+                    {
+                        "nama" : "luwung",
+                        "kode" : "LWG"
+                    },
+                    {
+                        "nama" : "sindanglaut",
+                        "kode" : "SDU"
+                    },
+                    {
+                        "nama" : "waruduwur",
+                        "kode" : "WDW"
+                    }
+                ]
+            },
+            "bojonegoro" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bojonegoro",
+                        "kode" : "BJ"
+                    },
+                    {
+                        "nama" : "kalitidu",
+                        "kode" : "KIT"
+                    },
+                    {
+                        "nama" : "sumberrejo",
+                        "kode" : "SRJ"
+                    }
+                ]
+            },
+            "cikampek" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cikampek",
+                        "kode" : "CKP"
+                    }
+                ]
+            },
+            "boyolali" : {
+                "stasiun" : [
+                    {
+                        "nama" : "telawa",
+                        "kode" : "TW"
+                    }
+                ]
+            },
+            "ciamis" : {
+                "stasiun" : [
+                    {
+                        "nama" : "banjarsari",
+                        "kode" : "BJI"
+                    },
+                    {
+                        "nama" : "ciamis",
+                        "kode" : "CI"
+                    },
+                    {
+                        "nama" : "cianjur",
+                        "kode" : "CJ"
+                    },
+                    {
+                        "nama" : "cibeber",
+                        "kode" : "CBB"
+                    },
+                    {
+                        "nama" : "cilaku",
+                        "kode" : "CLK"
+                    },
+                    {
+                        "nama" : "lampegan",
+                        "kode" : "LP"
+                    }
+                ]
+            },
+            "brebes" : {
+                "stasiun" : [
+                    {
+                        "nama" : "brebes",
+                        "kode" : "BB"
+                    },
+                    {
+                        "nama" : "bulakamba",
+                        "kode" : "BKA"
+                    },
+                    {
+                        "nama" : "ketanggungan",
+                        "kode" : "KGG"
+                    },
+                    {
+                        "nama" : "ketanggungan barat",
+                        "kode" : "KGB"
+                    },
+                    {
+                        "nama" : "kretek",
+                        "kode" : "KRT"
+                    },
+                    {
+                        "nama" : "larangan",
+                        "kode" : "LR"
+                    },
+                    {
+                        "nama" : "larangan",
+                        "kode" : "LRA"
+                    },
+                    {
+                        "nama" : "linggapura",
+                        "kode" : "LG"
+                    },
+                    {
+                        "nama" : "patuguran",
+                        "kode" : "PAT"
+                    },
+                    {
+                        "nama" : "songgom",
+                        "kode" : "SGG"
+                    },
+                    {
+                        "nama" : "tanjung",
+                        "kode" : "TGN"
+                    },
+                    {
+                        "nama" : "bumiayu",
+                        "kode" : "BMA"
+                    }
+                ]
+            },
+            "bogor" : {
+                "stasiun" : [
+                    {
+                        "nama" : "batu tulis",
+                        "kode" : "BTT"
+                    },
+                    {
+                        "nama" : "bogor",
+                        "kode" : "BOO"
+                    },
+                    {
+                        "nama" : "cigombong",
+                        "kode" : "CGB"
+                    },
+                    {
+                        "nama" : "maseng",
+                        "kode" : "MSG"
+                    },
+                    {
+                        "nama" : "parungpanjang",
+                        "kode" : "PRP"
+                    }
+                ]
+            },
+            "blitar" : {
+                "stasiun" : [
+                    {
+                        "nama" : "blitar",
+                        "kode" : "BL"
+                    },
+                    {
+                        "nama" : "garum",
+                        "kode" : "GRM"
+                    },
+                    {
+                        "nama" : "kesamben",
+                        "kode" : "KSB"
+                    },
+                    {
+                        "nama" : "talun",
+                        "kode" : "TAL"
+                    },
+                    {
+                        "nama" : "wlingi",
+                        "kode" : "WG"
+                    }
+                ]
+            },
+            "banyumas" : {
+                "stasiun" : [
+                    {
+                        "nama" : "karangsari",
+                        "kode" : "KRR"
+                    },
+                    {
+                        "nama" : "kebasen",
+                        "kode" : "KBS"
+                    },
+                    {
+                        "nama" : "kemranjen",
+                        "kode" : "KJ"
+                    },
+                    {
+                        "nama" : "notog",
+                        "kode" : "NTG"
+                    },
+                    {
+                        "nama" : "sumpiuh",
+                        "kode" : "SPH"
+                    },
+                    {
+                        "nama" : "tambak",
+                        "kode" : "TBK"
+                    }
+
+                ]
+            },
+            "malang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "blimbing",
+                        "kode" : "BMG"
+                    },
+                    {
+                        "nama" : "kepanjen",
+                        "kode" : "KPN"
+                    },
+                    {
+                        "nama" : "malang",
+                        "kode" : "ML"
+                    },
+                    {
+                        "nama" : "malang kota lama",
+                        "kode" : "MLK"
+                    },
+                    {
+                        "nama" : "sumberpucung",
+                        "kode" : "SBP"
+                    },
+                    {
+                        "nama" : "lawang",
+                        "kode" : "LW"
+                    }
+                ]
+            },
+            "medan" : {
+                "stasiun" : [
+                    {
+                        "nama" : "aekloba",
+                        "kode" : "AKB"
+                    },
+                    {
+                        "nama" : "bajalinggei",
+                        "kode" : "BJL"
+                    },
+                    {
+                        "nama" : "bandarkalipah",
+                        "kode" : "BAP"
+                    },
+                    {
+                        "nama" : "batangkuis",
+                        "kode" : "BTK"
+                    },
+                    {
+                        "nama" : "dolokmerangir",
+                        "kode" : "DMR"
+                    },
+                    {
+                        "nama" : "hengelo",
+                        "kode" : "HL"
+                    },
+                    {
+                        "nama" : "limapuluh",
+                        "kode" : "LMP"
+                    },
+                    {
+                        "nama" : "medan",
+                        "kode" : "MDN"
+                    },
+                    {
+                        "nama" : "membangmuda",
+                        "kode" : "MBM"
+                    },
+                    {
+                        "nama" : "padanghalaban",
+                        "kode" : "PHA"
+                    },
+                    {
+                        "nama" : "pamingke",
+                        "kode" : "PME"
+                    },
+                    {
+                        "nama" : "perbaungan",
+                        "kode" : "PBA"
+                    },
+                    {
+                        "nama" : "perlanaan",
+                        "kode" : "PRA"
+                    },
+                    {
+                        "nama" : "puluraja",
+                        "kode" : "PUR"
+                    },
+                    {
+                        "nama" : "sei bejangkar",
+                        "kode" : "SBJ"
+                    },
+                    {
+                        "nama" : "tebing tinggi",
+                        "kode" : "TBI"
+                    }
+                ]
+            },
+            "deli serdang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "lubukpakam",
+                        "kode" : "LBP"
+                    }
+                ]
+            },
+            "demak" : {
+                "stasiun" : [
+                    {
+                        "nama" : "brumbung",
+                        "kode" : "BBG"
+                    }
+                ]
+            },
+            "mojokerto" : {
+                "stasiun" : [
+                    {
+                        "nama" : "mojokerto",
+                        "kode" : "MR"
+                    }
+                ]
+            },
+            "muara enim" : {
+                "stasiun" : [
+                    {
+                        "nama" : "muara enim",
+                        "kode" : "ME"
+                    },
+                    {
+                        "nama" : "ujanmas",
+                        "kode" : "UJM"
+                    }
+                ]
+            },
+            "nganjuk" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bagor",
+                        "kode" : "BGR"
+                    },
+                    {
+                        "nama" : "baron",
+                        "kode" : "BRN"
+                    },
+                    {
+                        "nama" : "kertosono",
+                        "kode" : "KTS"
+                    },
+                    {
+                        "nama" : "nganjuk",
+                        "kode" : "NJ"
+                    },
+                    {
+                        "nama" : "wilangan",
+                        "kode" : "WIL"
+                    }
+                ]
+            },
+            "ngawi" : {
+                "stasiun" : [
+                    {
+                        "nama" : "geneng",
+                        "kode" : "GG"
+                    },
+                    {
+                        "nama" : "kedunggalar",
+                        "kode" : "KG"
+                    },
+                    {
+                        "nama" : "walikukun",
+                        "kode" : "WK"
+                    }
+                ]
+            },
+            "palembang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kertapati",
+                        "kode" : "KPT"
+                    }
+                ]
+            },
+            "pasuruan" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bangil",
+                        "kode" : "BG"
+                    },
+                    {
+                        "nama" : "grati",
+                        "kode" : "GI"
+                    },
+                    {
+                        "nama" : "pasuruan",
+                        "kode" : "PS"
+                    }
+                ]
+            },
+            "pekalongan" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bojong",
+                        "kode" : "BJG"
+                    },
+                    {
+                        "nama" : "krengseng",
+                        "kode" : "KNS"
+                    },
+                    {
+                        "nama" : "pekalongan",
+                        "kode" : "PK"
+                    },
+                    {
+                        "nama" : "plabuan",
+                        "kode" : "PLB"
+                    },
+                    {
+                        "nama" : "sragi",
+                        "kode" : "SRI"
+                    },
+                    {
+                        "nama" : "comal",
+                        "kode" : "CO"
+                    },
+                    {
+                        "nama" : "pemalang",
+                        "kode" : "PML"
+                    },
+                    {
+                        "nama" : "petarukan",
+                        "kode" : "PTA"
+                    }
+                ]
+            },
+            "pematang siantar" : {
+                "stasiun" : [
+                    {
+                        "nama" : "siantar",
+                        "kode" : "SIR"
+                    }
+                ]
+            },
+            "ponorogo" : {
+                "stasiun" : [
+                    {
+                        "nama" : "babadan",
+                        "kode" : "BBD"
+                    }
+                ]
+            },
+            "prabumulih" : {
+                "stasiun" : [
+                    {
+                        "nama" : "blimbingpendopo",
+                        "kode" : "BIB"
+                    },
+                    {
+                        "nama" : "gunungmegang",
+                        "kode" : "GNM"
+                    },
+                    {
+                        "nama" : "prabumulih",
+                        "kode" : "PBM"
+                    }
+                ]
+            },
+            "probolinggo" : {
+                "stasiun" : [
+                    {
+                        "nama" : "probolinggo",
+                        "kode" : "PB"
+                    }
+                ]
+            },
+            "purwakarta" : {
+                "stasiun" : [
+                    {
+                        "nama" : "plered",
+                        "kode" : "PLD"
+                    },
+                    {
+                        "nama" : "purwakarta",
+                        "kode" : "PWK"
+                    }
+                ]
+            },
+            "purwokerto" : {
+                "stasiun" : [
+                    {
+                        "nama" : "purwokerto",
+                        "kode" : "PWT"
+                    }
+                ]
+            },
+            "purworejo" : {
+                "stasiun" : [
+                    {
+                        "nama" : "jenar",
+                        "kode" : "JN"
+                    }
+                ]
+            },
+            "rantau prapat" : {
+                "stasiun" : [
+                    {
+                        "nama" : "merbau",
+                        "kode" : "MBU"
+                    },
+                    {
+                        "nama" : "rantau prapat",
+                        "kode" : "RAP"
+                    }
+                ]
+            },
+            "semarang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "semarangponcol",
+                        "kode" : "SMC"
+                    },
+                    {
+                        "nama" : "semarangtawang",
+                        "kode" : "SMTX"
+                    },
+                    {
+                        "nama" : "semarangtawang",
+                        "kode" : "SMT"
+                    }
+                ]
+            },
+            "serang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "serang",
+                        "kode" : "SG"
+                    }
+                ]
+            },
+            "serdang bedagai" : {
+                "stasiun" : [
+                    {
+                        "nama" : "rampah",
+                        "kode" : "RPH"
+                    }
+                ]
+            },
+            "sidoarjo" : {
+                "stasiun" : [
+                    {
+                        "nama" : "gedangan",
+                        "kode" : "GDG"
+                    },
+                    {
+                        "nama" : "krian",
+                        "kode" : "KRN"
+                    },
+                    {
+                        "nama" : "sepanjang",
+                        "kode" : "SPJ"
+                    },
+                    {
+                        "nama" : "sidoarjo",
+                        "kode" : "SDA"
+                    },
+                    {
+                        "nama" : "waru",
+                        "kode" : "WR"
+                    }
+                ]
+            },
+            "solo" : {
+                "stasiun" : [
+                    {
+                        "nama" : "purwosari",
+                        "kode" : "PWSX"
+                    },
+                    {
+                        "nama" : "purwosari",
+                        "kode" : "PWS"
+                    },
+                    {
+                        "nama" : "solobalapan",
+                        "kode" : "SLO"
+                    },
+                    {
+                        "nama" : "solojebres",
+                        "kode" : "SK"
+                    }
+                ]
+            },
+            "sragen" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kebonromo",
+                        "kode" : "KRO"
+                    },
+                    {
+                        "nama" : "kedungbanteng",
+                        "kode" : "KDB"
+                    },
+                    {
+                        "nama" : "masaran",
+                        "kode" : "MSR"
+                    },
+                    {
+                        "nama" : "sragen",
+                        "kode" : "SR"
+                    }
+                ]
+            },
+            "subang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cipunegara",
+                        "kode" : "CRA"
+                    },
+                    {
+                        "nama" : "pegadenbaru",
+                        "kode" : "PGB"
+                    },
+                    {
+                        "nama" : "tanjungrasa",
+                        "kode" : "TJS"
+                    }
+                ]
+            },
+            "sukabumi" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cibadak",
+                        "kode" : "CBD"
+                    },
+                    {
+                        "nama" : "cicurug",
+                        "kode" : "CCR"
+                    },
+                    {
+                        "nama" : "cireungas",
+                        "kode" : "CRG"
+                    },
+                    {
+                        "nama" : "cisaat",
+                        "kode" : "CSA"
+                    },
+                    {
+                        "nama" : "gandasoli",
+                        "kode" : "GDS"
+                    },
+                    {
+                        "nama" : "karang tengah",
+                        "kode" : "KE"
+                    },
+                    {
+                        "nama" : "parungkuda",
+                        "kode" : "PRK"
+                    },
+                    {
+                        "nama" : "sukabumi",
+                        "kode" : "SI"
+                    }
+                ]
+            },
+            "denpasar" : {
+                "stasiun" : [
+                    {
+                        "nama" : "denpasar",
+                        "kode" : "DEN"
+                    }
+                ]
+            },
+            "gombong" : {
+                "stasiun" : [
+                    {
+                        "nama" : "gombong",
+                        "kode" : "GB"
+                    },
+                    {
+                        "nama" : "ijo",
+                        "kode" : "IJ"
+                    }
+                ]
+            },
+            "grobogan" : {
+                "stasiun" : [
+                    {
+                        "nama" : "gundih",
+                        "kode" : "GD"
+                    },
+                    {
+                        "nama" : "karangjati",
+                        "kode" : "KGT"
+                    },
+                    {
+                        "nama" : "kedungjati",
+                        "kode" : "KEJ"
+                    },
+                    {
+                        "nama" : "ngrombo",
+                        "kode" : "NBO"
+                    }
+                ]
+            },
+            "indramayu" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cilegeh",
+                        "kode" : "CLH"
+                    },
+                    {
+                        "nama" : "haurgeulis",
+                        "kode" : "HGL"
+                    },
+                    {
+                        "nama" : "jatibarang",
+                        "kode" : "JTB"
+                    },
+                    {
+                        "nama" : "kadokangangabus",
+                        "kode" : "KAB"
+                    },
+                    {
+                        "nama" : "kertasemaya",
+                        "kode" : "KTM"
+                    },
+                    {
+                        "nama" : "terisi",
+                        "kode" : "TIS"
+                    }
+                ]
+            },
+            "jakarta" : {
+                "stasiun" : [
+                    {
+                        "nama" : "gambir",
+                        "kode" : "GMR"
+                    },
+                    {
+                        "nama" : "jakarta kota",
+                        "kode" : "JAKK"
+                    },
+                    {
+                        "nama" : "jatinegara",
+                        "kode" : "JNG"
+                    },
+                    {
+                        "nama" : "manggarai",
+                        "kode" : "MRI"
+                    },
+                    {
+                        "nama" : "tanjung priuk",
+                        "kode" : "TPK"
+                    },
+                    {
+                        "nama" : "pasar senen",
+                        "kode" : "PSE"
+                    }
+                ]
+            },
+            "jember" : {
+                "stasiun" : [
+                    {
+                        "nama" : "jatiroto",
+                        "kode" : "JTR"
+                    },
+                    {
+                        "nama" : "jember",
+                        "kode" : "JR"
+                    },
+                    {
+                        "nama" : "kalisat",
+                        "kode" : "KLT"
+                    },
+                    {
+                        "nama" : "rambipuji",
+                        "kode" : "RBP"
+                    },
+                    {
+                        "nama" : "tanggul",
+                        "kode" : "TGL"
+                    }
+                ]
+            },
+            "jombang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "jombang",
+                        "kode" : "JG"
+                    },
+                    {
+                        "nama" : "sembung",
+                        "kode" : "SMB"
+                    }
+                ]
+            },
+            "karawang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "karawang",
+                        "kode" : "KW"
+                    }
+                ]
+            },
+            "kebumen" : {
+                "stasiun" : [
+                    {
+                        "nama" : "karanganyar",
+                        "kode" : "KA"
+                    },
+                    {
+                        "nama" : "kutowinangun",
+                        "kode" : "KWN"
+                    },
+                    {
+                        "nama" : "kebumen",
+                        "kode" : "KM"
+                    },
+                    {
+                        "nama" : "prembun",
+                        "kode" : "PRB"
+                    },
+                    {
+                        "nama" : "sruweng",
+                        "kode" : "SRW"
+                    },
+                    {
+                        "nama" : "wonosari",
+                        "kode" : "WNS"
+                    }
+                ]
+            },
+            "kediri" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kediri",
+                        "kode" : "KD"
+                    },
+                    {
+                        "nama" : "papar",
+                        "kode" : "PPR"
+                    }
+                ]
+            },
+            "kendal" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kalibodri",
+                        "kode" : "KBD"
+                    },
+                    {
+                        "nama" : "kaliwungu",
+                        "kode" : "KLN"
+                    },
+                    {
+                        "nama" : "weleri",
+                        "kode" : "WLR"
+                    }
+                ]
+            },
+            "kisaran" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kisaran",
+                        "kode" : "KIS"
+                    }
+                ]
+            },
+            "klaten" : {
+                "stasiun" : [
+                    {
+                        "nama" : "klaten",
+                        "kode" : "KTX"
+                    },
+                    {
+                        "nama" : "klaten",
+                        "kode" : "KT"
+                    },
+                    {
+                        "nama" : "srowot",
+                        "kode" : "SWT"
+                    }
+                ]
+            },
+            "kotabumi" : {
+                "stasiun" : [
+                    {
+                        "nama" : "martapura",
+                        "kode" : "MP"
+                    }
+                ]
+            },
+            "kutoarjo" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kutoarjo",
+                        "kode" : "KTA"
+                    }
+                ]
+            },
+            "lahat" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bungamas",
+                        "kode" : "BGM"
+                    },
+                    {
+                        "nama" : "lahat",
+                        "kode" : "LT"
+                    },
+                    {
+                        "nama" : "saungnaga",
+                        "kode" : "SNA"
+                    },
+                    {
+                        "nama" : "tebingtinggi",
+                        "kode" : "TI"
+                    }
+                ]
+            },
+            "lamongan" : {
+                "stasiun" : [
+                    {
+                        "nama" : "babat",
+                        "kode" : "BBT"
+                    },
+                    {
+                        "nama" : "lamongan",
+                        "kode" : "LMG"
+                    }
+                ]
+            },
+            "lampung" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bekri",
+                        "kode" : "BKI"
+                    },
+                    {
+                        "nama" : "blambanganumpu",
+                        "kode" : "BBU"
+                    },
+                    {
+                        "nama" : "giham",
+                        "kode" : "GHM"
+                    },
+                    {
+                        "nama" : "kotabumi",
+                        "kode" : "KB"
+                    },
+                    {
+                        "nama" : "tanjungkarang",
+                        "kode" : "TNK"
+                    },
+                    {
+                        "nama" : "tulungbuyut",
+                        "kode" : "TLY"
+                    }
+                ]
+            },
+            "garut" : {
+                "stasiun" : [
+                    {
+                        "nama" : "cibatu",
+                        "kode" : "CB"
+                    },
+                    {
+                        "nama" : "cipeundeuy",
+                        "kode" : "CPD"
+                    },
+                    {
+                        "nama" : "lebakjero",
+                        "kode" : "LBJ"
+                    },
+                    {
+                        "nama" : "leles",
+                        "kode" : "LL"
+                    },
+                    {
+                        "nama" : "nagreg",
+                        "kode" : "NG"
+                    },
+                    {
+                        "nama" : "warung bandrek",
+                        "kode" : "WB"
+                    }
+                ]
+            },
+            "lebak" : {
+                "stasiun" : [
+                    {
+                        "nama" : "rangkas bitung",
+                        "kode" : "RK"
+                    }
+                ]
+            },
+            "lubuk linggau" : {
+                "stasiun" : [
+                    {
+                        "nama" : "kotapadang",
+                        "kode" : "KOP"
+                    },
+                    {
+                        "nama" : "lubuk linggau",
+                        "kode" : "LLG"
+                    },
+                    {
+                        "nama" : "muarasaling",
+                        "kode" : "MSL"
+                    }
+                ]
+            },
+            "madiun" : {
+                "stasiun" : [
+                    {
+                        "nama" : "caruban",
+                        "kode" : "CRB"
+                    },
+                    {
+                        "nama" : "madiun",
+                        "kode" : "MN"
+                    },
+                    {
+                        "nama" : "paron",
+                        "kode" : "PA"
+                    },
+                    {
+                        "nama" : "saradan",
+                        "kode" : "SRD"
+                    }
+                ]
+            },
+            "magetan" : {
+                "stasiun" : [
+                    {
+                        "nama" : "barat",
+                        "kode" : "BAT"
+                    }
+                ]
+            },
+            "lumajang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "klakah",
+                        "kode" : "KOP"
+                    }
+                ]
+            },
+            "tegal" : {
+                "stasiun" : [
+                    {
+                        "nama" : "prupuk",
+                        "kode" : "PPK"
+                    },
+                    {
+                        "nama" : "slawi",
+                        "kode" : "SLW"
+                    },
+                    {
+                        "nama" : "tegal",
+                        "kode" : "TG"
+                    }
+                ]
+            },
+            "tulungagung" : {
+                "stasiun" : [
+                    {
+                        "nama" : "ngunut",
+                        "kode" : "NT"
+                    },
+                    {
+                        "nama" : "tulungagung",
+                        "kode" : "TA"
+                    }
+                ]
+            },
+            "yogyakarta" : {
+                "stasiun" : [
+                    {
+                        "nama" : "brambanan",
+                        "kode" : "BBN"
+                    },
+                    {
+                        "nama" : "lempuyangan",
+                        "kode" : "LPNX"
+                    },
+                    {
+                        "nama" : "lempuyangan",
+                        "kode" : "LPN"
+                    },
+                    {
+                        "nama" : "sentolo",
+                        "kode" : "STL"
+                    },
+                    {
+                        "nama" : "wates",
+                        "kode" : "WT"
+                    },
+                    {
+                        "nama" : "yogyakarta",
+                        "kode" : "YKX"
+                    },
+                    {
+                        "nama" : "yogyakarta",
+                        "kode" : "YK"
+                    }
+                ]
+            },
+            "surabaya" : {
+                "stasiun" : [
+                    {
+                        "nama" : "surabaya gubeng",
+                        "kode" : "SGU"
+                    },
+                    {
+                        "nama" : "surabaya pasar turi",
+                        "kode" : "SBI"
+                    },
+                    {
+                        "nama" : "wonokromo",
+                        "kode" : "WO"
+                    }
+                ]
+            },
+            "surakarta" : {
+                "stasiun" : [
+                    {
+                        "nama" : "solobalapan",
+                        "kode" : "SLOX"
+                    }
+                ]
+            },
+            "tangerang" : {
+                "stasiun" : [
+                    {
+                        "nama" : "tangerang",
+                        "kode" : "TNG"
+                    }
+                ]
+            },
+            "tanjung balai" : {
+                "stasiun" : [
+                    {
+                        "nama" : "tanjungbalai",
+                        "kode" : "TNB"
+                    }
+                ]
+            },
+            "tasikmalaya" : {
+                "stasiun" : [
+                    {
+                        "nama" : "awipari",
+                        "kode" : "AW"
+                    },
+                    {
+                        "nama" : "ciawi",
+                        "kode" : "CAW"
+                    },
+                    {
+                        "nama" : "manonjaya",
+                        "kode" : "MNJ"
+                    },
+                    {
+                        "nama" : "rajapolah",
+                        "kode" : "RJP"
+                    },
+                    {
+                        "nama" : "tasikmalaya",
+                        "kode" : "TSM"
+                    }
+                ]
+            },
+            "bandung" : {
+                "stasiun" : [
+                    {
+                        "nama" : "bandung",
+                        "kode" : "BD"
+                    },
+                    {
+                        "nama" : "cicalengka",
+                        "kode" : "CCL"
+                    },
+                    {
+                        "nama" : "cikadongdong",
+                        "kode" : "CD"
+                    },
+                    {
+                        "nama" : "gedebage",
+                        "kode" : "GDB"
+                    },
+                    {
+                        "nama" : "haurpugur",
+                        "kode" : "HRP"
+                    },
+                    {
+                        "nama" : "padalarang",
+                        "kode" : "PDL"
+                    },
+                    {
+                        "nama" : "kiaracondong",
+                        "kode" : "KAC"
+                    },
+                    {
+                        "nama" : "rancaekek",
+                        "kode" : "RCK"
+                    },
+                    {
+                        "nama" : "rendeh",
+                        "kode" : "RH"
+                    },
+                    {
+                        "nama" : "cimahi",
+                        "kode" : "CMI"
+                    }
+                ]
+            }
+        }
+    }
+} 

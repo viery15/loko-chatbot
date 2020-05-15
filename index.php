@@ -216,13 +216,12 @@ if($message['type']=='text'){
         curl_close ($ch);
         
         $result = json_decode($server_output);
-		echo $result;
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
 			'messages' => array(
 				array(
 					'type' => 'text',                   
-					'text' =>'haloo'
+					'text' => $result[0]['jawaban']
 				)
 			)
 		);

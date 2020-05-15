@@ -235,6 +235,15 @@ function get_output($data){
 	if (count($data) == 1) {
 		return $data[0]->jawaban;
 	}
+	else {
+		$nomor = 1;
+		$result = "";
+		for ($i=0; $i < $data; $i++) { 
+			$result .= $nomor . ". ". $data[$i]->pertanyaan . "\n";
+		}
+
+		return $result;
+	}
 }
 
 ?>

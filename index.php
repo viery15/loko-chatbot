@@ -238,7 +238,7 @@ function get_output($data){
 	else {
 		$nomor = 1;
 		$result = "";
-		for ($i=0; $i < $data; $i++) { 
+		for ($i=0; $i < count($data); $i++) { 
 			$result .= $nomor . ". ". $data[$i]->pertanyaan . "\n";
 		}
 

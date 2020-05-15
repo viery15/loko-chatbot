@@ -215,19 +215,26 @@ if($message['type']=='text'){
 
         curl_close ($ch);
         
-        $result = json_decode($server_output);
+		$result = json_decode($server_output);
+		$result = get_output($result);
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
 			'messages' => array(
 				array(
 					'type' => 'text',                   
-					'text' => $result[0]->jawaban
+					'text' => $result
 				)
 			)
 		);
 		$client->replyMessage($balas);
 	}
 
+}
+
+function get_output($data){
+	if (count($data) == 1) {
+		return $data[0]->jawaban;
+	}
 }
 
 ?>

@@ -201,7 +201,7 @@ if($message['type']=='text'){
 		
 		$ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL,"https://loko-main-proccess.herokuapp.com/preprocessing");
+        curl_setopt($ch, CURLOPT_URL,"https://loko-preprocessing.herokuapp.com/preprocessing");
         curl_setopt($ch, CURLOPT_POST, 1);
 
         curl_setopt($ch, CURLOPT_POSTFIELDS, 

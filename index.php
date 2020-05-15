@@ -216,7 +216,7 @@ if($message['type']=='text'){
         curl_close ($ch);
         
         $result = json_decode($server_output);
-		print_r($result);
+		echo $result;
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
 			'messages' => array(

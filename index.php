@@ -237,10 +237,12 @@ function get_output($data){
 	}
 	else {
 		$nomor = 1;
-		$result = "";
+		$result = "Mungkin maksud anda" . "\n\n";
 		for ($i=0; $i < count($data); $i++) { 
 			$result .= $nomor . ". ". $data[$i]->pertanyaan . "\n";
+			$nomor++;
 		}
+		$result .= "\n" . "Masukkan nomer dari pertanyaan yang anda maksud";
 
 		return $result;
 	}

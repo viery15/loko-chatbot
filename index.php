@@ -221,7 +221,7 @@ if($message['type']=='text'){
 			'messages' => array(
 				array(
 					'type' => 'text',                   
-					'text' => $result[0]['jawaban']
+					'text' => $result[0]->jawaban
 				)
 			)
 		);

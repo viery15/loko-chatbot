@@ -270,6 +270,7 @@ if($message['type']=='text'){
 			)
 		);
 		$client->replyMessage($balas);
+		saveHistory($userId, $profil->displayName, $keyword, $result);
 	}
 
 }
@@ -319,6 +320,13 @@ function getJawaban($id){
 function resetPercakapan($userId){
 	include "/app/db.php";
 	$sql = "DELETE FROM chatbot.temp WHERE id_user='$userId'";
+	$result = pg_query($connect, $sql);
+}
+
+function saveHistory($userId, $nama, $input, $output){
+	include "/app/db.php";
+	$tanggal = date("d-m-Y");
+	$sql = "INSERT INTO chatbot.history (user_id, nama, input, tanggal, output) VALUES ('". $userId ."','". $nama ."','". $input ."','". $tanggal ."','". $output ."')";
 	$result = pg_query($connect, $sql);
 }
 

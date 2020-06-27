@@ -17,28 +17,10 @@ $profil         = $client->profil($userId);
 
 $msg_receive   = $message['text'];
 
-// $ch = curl_init();
-
-// curl_setopt($ch, CURLOPT_URL,"https://loko-preprocessing.herokuapp.com/HistoryController/create");
-// curl_setopt($ch, CURLOPT_POST, 1);
-
-// curl_setopt($ch, CURLOPT_POSTFIELDS, 
-// 	http_build_query(array(
-// 		'user_id' => $userId,
-// 		'nama' => $profil->displayName,
-// 		'input' => $msg_receive,
-// 		'tanggal' => date("d-m-Y"),
-// 	)));
-
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-// $server_output = curl_exec($ch);
-
-// curl_close ($ch);
-
 if($message['type']=='text'){
 	$keyword = strtolower($msg_receive);
 	$status = cekInit($userId);
+	$status_temp = cekTemp($userId);
 
 	if($keyword == 'jadwal dong' || $keyword == 'mau tanya jadwal' || $keyword == 'masuk pesan tiket kereta'){
 		init($userId);
@@ -54,6 +36,10 @@ if($message['type']=='text'){
 			)
 		);
 		$client->replyMessage($balas);
+	}
+
+	else if($keyword == "/exit"){
+		resetPercakapan($userId);
 	}
 
 	else if(is_array($status)){
@@ -216,6 +202,34 @@ if($message['type']=='text'){
 		}
 	}
 
+	elseif (is_array($status_temp)) {
+		$jawaban = "";
+		for ($i=0; $i < count($status_temp); $i++) { 
+			if ($status_temp[$i]['number'] == $keyword) {
+				$jawaban = $status_temp[$i]['jawaban'];
+				
+			}
+			
+		}
+		if($jawaban == "") {
+			$jawaban = "Maaf yang anda masukkan salah, silahkan ulangin atau ketik /exit untuk memulai pertanyaan baru";
+		}
+		else {
+			resetPercakapan($userId);
+		}
+
+		$balas = array(
+			'replyToken' => $replyToken,                                                        
+			'messages' => array(
+				array(
+					'type' => 'text',                   
+					'text' => $jawaban
+				)
+			)
+		);
+		$client->replyMessage($balas);
+	}
+
 	else {
 		
 		$ch = curl_init();
@@ -258,8 +272,8 @@ function get_output($data, $userId){
 		$nomor = 1;
 		$result = "Mungkin maksud anda" . "\n\n";
 		for ($i=0; $i < count($data); $i++) { 
-			simpan_temp($userId, $nomor, $data[$i]->jawaban);
 			$result .= $nomor . ". ". $data[$i]->pertanyaan . "\n";
+			save_temp($nomor, $userId, $data[$i]->jawaban);
 			$nomor++;
 		}
 		$result .= "\n" . "Masukkan nomer dari pertanyaan yang anda maksud";
@@ -268,8 +282,34 @@ function get_output($data, $userId){
 	}
 }
 
-function simpan_temp($userId, $number, $jawaban){
+function save_temp($number, $id_user, $jawaban){
 	include "/app/db.php";
-	$sql = "INSERT INTO chatbot.temp (id_user, number, jawaban) VALUES ('". $userId ."','". $number ."','". $jawaban ."')";
+	$sql = "INSERT INTO chatbot.temp (id_user, number, jawaban) VALUES ('". $id_user ."','". $number ."','". $jawaban ."')";
 	$result = pg_query($connect, $sql);
 }
+
+function cekTemp($userId){
+	include "/app/db.php";
+	$sql = "SELECT * FROM chatbot.temp WHERE id_user='".$userId."'";
+	$result = pg_query($connect, $sql);
+	$row = pg_fetch_all($result);
+	return $row;
+}
+
+function getJawaban($id){
+	include "/app/db.php";
+	$sql = "SELECT * FROM chatbot.faq WHERE id='".$id."'";
+	$result = pg_query($connect, $sql);
+	$row = pg_fetch_array($result);
+	$jawaban = $row['jawaban'];
+
+	return $jawaban;
+}
+
+function resetPercakapan($userId){
+	include "/app/db.php";
+	$sql = "DELETE FROM chatbot.temp WHERE id_user='$userId'";
+	$result = pg_query($connect, $sql);
+}
+
+?>

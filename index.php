@@ -40,6 +40,16 @@ if($message['type']=='text'){
 
 	else if($keyword == "/exit"){
 		resetPercakapan($userId);
+		$balas = array(
+			'replyToken' => $replyToken,                                                        
+			'messages' => array(
+				array(
+					'type' => 'text',                   
+					'text' => "Terimakasih kak " . $profil->displayName . " ada yang bisa loko bantu lagi ?"
+				)
+			)
+		);
+		$client->replyMessage($balas);
 	}
 
 	else if(is_array($status)){

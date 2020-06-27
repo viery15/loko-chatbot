@@ -27,7 +27,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,
 		'user_id' => $userId,
 		'nama' => $profil->displayName,
 		'input' => $msg_receive,
-		'tanggal' => date("d-m-Y H:i:s"),
+		'tanggal' => date("d-m-Y"),
 	)));
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

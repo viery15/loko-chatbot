@@ -17,24 +17,24 @@ $profil         = $client->profil($userId);
 
 $msg_receive   = $message['text'];
 
-$ch = curl_init();
+// $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL,"https://loko-preprocessing.herokuapp.com/HistoryController/create");
-curl_setopt($ch, CURLOPT_POST, 1);
+// curl_setopt($ch, CURLOPT_URL,"https://loko-preprocessing.herokuapp.com/HistoryController/create");
+// curl_setopt($ch, CURLOPT_POST, 1);
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 
-	http_build_query(array(
-		'user_id' => $userId,
-		'nama' => $profil->displayName,
-		'input' => $msg_receive,
-		'tanggal' => date("d-m-Y"),
-	)));
+// curl_setopt($ch, CURLOPT_POSTFIELDS, 
+// 	http_build_query(array(
+// 		'user_id' => $userId,
+// 		'nama' => $profil->displayName,
+// 		'input' => $msg_receive,
+// 		'tanggal' => date("d-m-Y"),
+// 	)));
 
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-$server_output = curl_exec($ch);
+// $server_output = curl_exec($ch);
 
-curl_close ($ch);
+// curl_close ($ch);
 
 if($message['type']=='text'){
 	$keyword = strtolower($msg_receive);

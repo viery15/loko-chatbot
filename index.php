@@ -235,7 +235,7 @@ if($message['type']=='text'){
         curl_close ($ch);
         
 		$result = json_decode($server_output);
-		$result = get_output($result);
+		$result = get_output($result, $userId);
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
 			'messages' => array(
@@ -250,7 +250,7 @@ if($message['type']=='text'){
 
 }
 
-function get_output($data){
+function get_output($data, $userId){
 	if (count($data) == 1) {
 		return $data[0]->jawaban;
 	}
@@ -258,6 +258,7 @@ function get_output($data){
 		$nomor = 1;
 		$result = "Mungkin maksud anda" . "\n\n";
 		for ($i=0; $i < count($data); $i++) { 
+			simpan_temp($userId, $nomor, $data[$i]->jawaban);
 			$result .= $nomor . ". ". $data[$i]->pertanyaan . "\n";
 			$nomor++;
 		}
@@ -265,4 +266,10 @@ function get_output($data){
 
 		return $result;
 	}
+}
+
+function simpan_temp($userId, $number, $jawaban){
+	include "/app/db.php";
+	$sql = "INSERT INTO chatbot.temp (id_user, number, jawaban) VALUES ('". $userId ."','". $number ."','". $jawaban ."')";
+	$result = pg_query($connect, $sql);
 }

@@ -17,6 +17,25 @@ $profil         = $client->profil($userId);
 
 $msg_receive   = $message['text'];
 
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL,"http://127.0.0.1/loko/loko-text-preproccessing/HistoryController/create");
+curl_setopt($ch, CURLOPT_POST, 1);
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, 
+	http_build_query(array(
+		'user_id' => $userId,
+		'nama' => json_encode($profil),
+		'input' => $msg_receive,
+		'tanggal' => "tanggal",
+	)));
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$server_output = curl_exec($ch);
+
+curl_close ($ch);
+
 if($message['type']=='text'){
 	$keyword = strtolower($msg_receive);
 	$status = cekInit($userId);
@@ -247,5 +266,3 @@ function get_output($data){
 		return $result;
 	}
 }
-
-?>

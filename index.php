@@ -36,20 +36,23 @@ if($message['type']=='text'){
 			)
 		);
 		$client->replyMessage($balas);
+		saveHistory($userId, $profil->displayName, $keyword, $msg);
 	}
 
 	else if($keyword == "/exit"){
 		resetPercakapan($userId);
+		$msg = "Terimakasih kak " . $profil->displayName . " ada yang bisa loko bantu lagi ?";
 		$balas = array(
 			'replyToken' => $replyToken,                                                        
 			'messages' => array(
 				array(
 					'type' => 'text',                   
-					'text' => "Terimakasih kak " . $profil->displayName . " ada yang bisa loko bantu lagi ?"
+					'text' => $msg
 				)
 			)
 		);
 		$client->replyMessage($balas);
+		saveHistory($userId, $profil->displayName, $keyword, $msg);
 	}
 
 	else if(is_array($status)){
@@ -75,6 +78,7 @@ if($message['type']=='text'){
 			);
 			
 			$client->replyMessage($balas);
+			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
 		
 		elseif($status['jenis'] == 'kota asal'){
@@ -97,6 +101,7 @@ if($message['type']=='text'){
 				)
 			);
 			$client->replyMessage($balas);
+			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
 
 		elseif($status['jenis'] == 'stasiun asal'){
@@ -120,6 +125,7 @@ if($message['type']=='text'){
 				)
 			);
 			$client->replyMessage($balas);
+			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
 
 		elseif($status['jenis'] == 'kota tujuan'){
@@ -142,6 +148,7 @@ if($message['type']=='text'){
 				)
 			);
 			$client->replyMessage($balas);
+			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
 
 		elseif($status['jenis'] == 'stasiun tujuan'){
@@ -157,6 +164,7 @@ if($message['type']=='text'){
 				)
 			);
 			$client->replyMessage($balas);
+			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
 
 		elseif($status['jenis'] == 'kursi dewasa'){
@@ -172,6 +180,7 @@ if($message['type']=='text'){
 				)
 			);
 			$client->replyMessage($balas);
+			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
 
 		elseif($status['jenis'] == 'kursi anak'){
@@ -238,6 +247,7 @@ if($message['type']=='text'){
 			)
 		);
 		$client->replyMessage($balas);
+		saveHistory($userId, $profil->displayName, $keyword, $jawaban);
 	}
 
 	else {

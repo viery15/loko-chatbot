@@ -25,7 +25,7 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, 
 	http_build_query(array(
 		'user_id' => $userId,
-		'nama' => $profil['displayName'],
+		'nama' => $profil->displayName,
 		'input' => $msg_receive,
 		'tanggal' => "tanggal",
 	)));

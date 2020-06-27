@@ -19,7 +19,7 @@ $msg_receive   = $message['text'];
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL,"http://127.0.0.1/loko/loko-text-preproccessing/HistoryController/create");
+curl_setopt($ch, CURLOPT_URL,"https://loko-preprocessing.herokuapp.com/HistoryController/create");
 curl_setopt($ch, CURLOPT_POST, 1);
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, 

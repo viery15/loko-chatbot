@@ -70,6 +70,22 @@
         $string = file_get_contents("/app/jadwal/data.json");
         $data = json_decode($string, true);
         $response = "kota tidak ditemukan";
+
+        $sinonim_kota = array(
+            ['surabaya', 'sby', 'suroboyo'],
+            ['malang', 'ml', 'ML', 'mlg'],
+            ['jakarta', 'jkt'],
+            ['bandung', 'bdg']
+        );
+
+        for ($j=0; $j < count($sinonim_kota) ; $j++) { 
+            for ($k=0; $k < count($sinonim_kota[$j]); $k++) { 
+                if ($kota == $sinonim_kota[$j][$k]) {
+                    $kota = $sinonim_kota[$j][0];
+                }
+            }
+        }
+
         foreach ($data['data']['kota'] as $key => $value) {
             if($kota == $key){
                 $response = "tersedia";

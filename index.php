@@ -22,7 +22,7 @@ if($message['type']=='text'){
 	$status = cekInit($userId);
 	$status_temp = cekTemp($userId);
 
-	if($keyword == 'jadwal dong' || $keyword == 'mau tanya jadwal' || $keyword == 'masuk pesan tiket kereta'){
+	if($keyword == 'jadwal dong' || $keyword == 'mau tanya jadwal'){
 		init($userId);
 		$msg = "Masukkan kota asal anda";
 
@@ -484,6 +484,11 @@ if($message['type']=='text'){
 		}
 		else {
 			resetPercakapan($userId);
+		}
+
+		if ($jawaban == "init") {
+			init($userId);
+			$jawaban = "Masukkan kota asal anda";
 		}
 
 		$balas = array(

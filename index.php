@@ -516,7 +516,12 @@ if($message['type']=='text'){
 							  'label' => 'Ya',
 							  'text' => "/exit",
 							),
-							
+							1 => 
+							array (
+							  'type' => 'message',
+							  'label' => 'Tidak',
+							  'text' => $keyword,
+							),
 						  ),
 						),
 					  )

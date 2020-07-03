@@ -92,7 +92,7 @@
         foreach ($data['data']['kota'] as $key => $value) {
             for ($i=0; $i < count($data['data']['kota'][$kota]['stasiun']); $i++) { 
                 if($data['data']['kota'][$kota]['stasiun'][$i]['nama'] == $input || $i+1 == $input){
-                    $response = "tersedia";
+                    $response = $data['data']['kota'][$kota]['stasiun'][$i]['nama'];
                 }
             }
         }

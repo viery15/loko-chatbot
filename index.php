@@ -82,8 +82,8 @@ if($message['type']=='text'){
 		}
 		
 		elseif($status['jenis'] == 'kota asal'){
-			$status_stasiun = cekStasiun($keyword, $userId);
-			if($status_stasiun == 'tersedia'){
+			$status = cekStasiun($keyword, $userId);
+			if($status != 'stasiun tidak ditemukan'){
 				tambahStasiunAsal($keyword, $userId);
 				$msg = "Masukkan kota tujuan";
 			}

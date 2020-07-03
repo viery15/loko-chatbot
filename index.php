@@ -128,24 +128,45 @@ if($message['type']=='text'){
 					'messages' => array(
 						array (
 							'type' => 'template',
-							"altText"=> "this is a confirm template",
+							'altText' => 'Jadwal kereta api',
 							'template' => 
-								array (
-									'type' => 'confirm',
-									'text' => $msg,
-									'action' => 
-										array(
-											"type"=> "message",
-											"label"=> "Yes",
-											"text"=> "yes"
-										),
-										array(
-											"type"=> "message",
-											"label"=> "No",
-											"text"=> "no"
-										)
-								),
+							array (
+							  'type' => 'carousel',
+							  'columns' => $msg,
+							  'imageAspectRatio' => 'rectangle',
+							  'imageSize' => 'cover',
+							),
 						)
+					)
+				);
+
+				$balas = array(
+					'replyToken' => $replyToken,                                                        
+					'messages' => array(
+						array (
+							'type' => 'template',
+							'altText' => 'this is a confirm template',
+							'template' => 
+							array (
+							  'type' => 'confirm',
+							  'text' => 'Are you sure?',
+							  'actions' => 
+							  array (
+								0 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Yes',
+								  'text' => 'yes',
+								),
+								1 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'No',
+								  'text' => 'no',
+								),
+							  ),
+							),
+						  )
 					)
 				);
 

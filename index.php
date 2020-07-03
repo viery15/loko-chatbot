@@ -128,35 +128,18 @@ if($message['type']=='text'){
 					'messages' => array(
 						array (
 							'type' => 'template',
-							'altText' => 'Jadwal kereta api',
-							'template' => 
-							array (
-							  'type' => 'carousel',
-							  'columns' => $msg,
-							  'imageAspectRatio' => 'rectangle',
-							  'imageSize' => 'cover',
-							),
-						)
-					)
-				);
-
-				$balas = array(
-					'replyToken' => $replyToken,                                                        
-					'messages' => array(
-						array (
-							'type' => 'template',
 							'altText' => 'this is a confirm template',
 							'template' => 
 							array (
 							  'type' => 'confirm',
-							  'text' => 'Are you sure?',
+							  'text' => $msg,
 							  'actions' => 
 							  array (
 								0 => 
 								array (
 								  'type' => 'message',
-								  'label' => 'Yes',
-								  'text' => 'yes',
+								  'label' => 'Ya',
+								  'text' => "/exit",
 								),
 								1 => 
 								array (
@@ -378,7 +361,9 @@ function getJawaban($id){
 function resetPercakapan($userId){
 	include "/app/db.php";
 	$sql = "DELETE FROM chatbot.temp WHERE id_user='$userId'";
+	$sql2 = "DELETE FROM chatbot.jadwal WHERE id_user='$userId'";
 	$result = pg_query($connect, $sql);
+	$result2 = pg_query($connect, $sql2);
 }
 
 function saveHistory($userId, $nama, $input, $output){

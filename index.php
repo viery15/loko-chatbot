@@ -391,38 +391,80 @@ if($message['type']=='text'){
 		}
 
 		elseif($status['jenis'] == 'kursi anak'){
-			$msg = tanggalKeberangkatan($keyword, $userId);
 
-			if ($msg['status'] == "gagal") {
-				$balas = array(
-					'replyToken' => $replyToken,                                                        
-					'messages' => array(
-						array(
-							'type' => 'text',                   
-							'text' => $msg['msg']
+			$validasi_tanggal = validateDate($keyword);
+
+			if ($validasi_tanggal) {
+				$msg = tanggalKeberangkatan($keyword, $userId);
+
+				if ($msg['status'] == "gagal") {
+					$balas = array(
+						'replyToken' => $replyToken,                                                        
+						'messages' => array(
+							array(
+								'type' => 'text',                   
+								'text' => $msg['msg']
+							)
 						)
-					)
-				);
+					);
+				}
+
+				else {
+					$balas = array(
+						'replyToken' => $replyToken,                                                        
+						'messages' => array(
+							array (
+								'type' => 'template',
+								'altText' => 'Jadwal kereta api',
+								'template' => 
+								array (
+								'type' => 'carousel',
+								'columns' => $msg,
+								'imageAspectRatio' => 'rectangle',
+								'imageSize' => 'cover',
+								),
+							)
+						)
+					);
+				}
 			}
 
 			else {
+				$msg = "Tanggal yang anda masukkan salah. ingin memulai pertanyaan baru ?";
+				$prev_msg = reAsk($userId);
+
 				$balas = array(
 					'replyToken' => $replyToken,                                                        
 					'messages' => array(
 						array (
 							'type' => 'template',
-							'altText' => 'Jadwal kereta api',
+							'altText' => 'this is a confirm template',
 							'template' => 
 							array (
-							  'type' => 'carousel',
-							  'columns' => $msg,
-							  'imageAspectRatio' => 'rectangle',
-							  'imageSize' => 'cover',
+							  'type' => 'confirm',
+							  'text' => $msg,
+							  'actions' => 
+							  array (
+								0 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Ya',
+								  'text' => "/exit",
+								),
+								1 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Tidak',
+								  'text' => $prev_msg,
+								),
+							  ),
 							),
-						)
+						  )
 					)
 				);
 			}
+
+			
 			
 			$client->replyMessage($balas);
 		}
@@ -561,6 +603,13 @@ function reAsk($userId){
 
 
 	return $row['value'];
+}
+
+function validateDate($date, $format = 'd-m-Y')
+{
+    $d = DateTime::createFromFormat($format, $date);
+    
+    return $d && $d->format($format) === $date;
 }
 
 ?>

@@ -82,9 +82,9 @@ if($message['type']=='text'){
 		}
 		
 		elseif($status['jenis'] == 'kota asal'){
-			$status = cekStasiun($keyword, $userId);
-			if($status != 'stasiun tidak ditemukan'){
-				tambahStasiunAsal($keyword, $userId);
+			$stasiun_awal = cekStasiun($keyword, $userId);
+			if($stasiun_awal != 'stasiun tidak ditemukan'){
+				tambahStasiunAsal($stasiun_awal, $userId);
 				$msg = "Masukkan kota tujuan";
 			}
 			else {
@@ -129,9 +129,9 @@ if($message['type']=='text'){
 		}
 
 		elseif($status['jenis'] == 'kota tujuan'){
-			$status_stasiun = cekStasiun($keyword, $userId);
-			if($status_stasiun == 'tersedia'){
-				tambahStasiunTujuan($keyword, $userId);
+			$stasiun_tujuan = cekStasiun($keyword, $userId);
+			if($stasiun_tujuan != 'stasiun tidak ditemukan'){
+				tambahStasiunTujuan($stasiun_tujuan, $userId);
 				$msg = "Masukkan jumlah penumpang dewasa (3 thn keatas), maximal 4";
 			}
 			else {

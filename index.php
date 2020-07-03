@@ -278,7 +278,6 @@ if($message['type']=='text'){
 		}
 
 		elseif($status['jenis'] == 'stasiun tujuan'){
-			$keyword = (int) $keyword;
 
 			if(is_numeric($keyword) && $keyword >= 0){
 				tambahKursiDewasa($keyword, $userId);

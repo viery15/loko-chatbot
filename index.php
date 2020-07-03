@@ -295,7 +295,7 @@ if($message['type']=='text'){
 
 			else {
 
-				$msg = "Yang anda masukkan salah, silahkan masukkan angka dengan benar";
+				$msg = "Jumlah yang anda masukkan salah. ingin memulai pertanyaan baru ?";
 				$prev_msg = reAsk($userId);
 
 				$balas = array(

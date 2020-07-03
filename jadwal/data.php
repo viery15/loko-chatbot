@@ -78,7 +78,7 @@
         return $response;
     }
 
-    function cekStasiun($stasiun, $userId){
+    function cekStasiun($input, $userId){
         include "/app/db.php";
         $string = file_get_contents("/app/jadwal/data.json");
         $data = json_decode($string, true);
@@ -91,7 +91,7 @@
 
         foreach ($data['data']['kota'] as $key => $value) {
             for ($i=0; $i < count($data['data']['kota'][$kota]['stasiun']); $i++) { 
-                if($data['data']['kota'][$kota]['stasiun'][$i]['nama'] == $stasiun){
+                if($data['data']['kota'][$kota]['stasiun'][$i]['nama'] == $input || $i+1 == $input){
                     $response = "tersedia";
                 }
             }

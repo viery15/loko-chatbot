@@ -62,21 +62,52 @@ if($message['type']=='text'){
 				tambahKotaAsal($userId, $kota_awal);
 				$stasiun = dataStasiun($kota_awal);
 				$msg = "Masukkan stasiun asal\n\n" . $stasiun;
+
+				$balas = array(
+					'replyToken' => $replyToken,                                                        
+					'messages' => array(
+						array(
+							'type' => 'text',                   
+							'text' => $msg
+						)
+					)
+				);
+
 			}
 			else {
-				$msg = 'Kota yang anda cari tidak tersedia';
+				$msg = "Kota yang anda cari tidak tersedia, ingin memulai pertanyaan baru ?";
+
+				$balas = array(
+					'replyToken' => $replyToken,                                                        
+					'messages' => array(
+						array (
+							'type' => 'template',
+							'altText' => 'this is a confirm template',
+							'template' => 
+							array (
+							  'type' => 'confirm',
+							  'text' => $msg,
+							  'actions' => 
+							  array (
+								0 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Ya',
+								  'text' => "/exit",
+								),
+								1 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Tidak',
+								  'text' => 'jadwal dong',
+								),
+							  ),
+							),
+						  )
+					)
+				);
 			}
 
-			$balas = array(
-				'replyToken' => $replyToken,                                                        
-				'messages' => array(
-					array(
-						'type' => 'text',                   
-						'text' => $msg
-					)
-				)
-			);
-			
 			$client->replyMessage($balas);
 			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}

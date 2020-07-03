@@ -475,15 +475,9 @@ if($message['type']=='text'){
 		for ($i=0; $i < count($status_temp); $i++) { 
 			if ($status_temp[$i]['number'] == $keyword) {
 				$jawaban = $status_temp[$i]['jawaban'];
-				
+				resetPercakapan($userId);
 			}
 			
-		}
-		if($jawaban == "") {
-			$jawaban = "Maaf yang anda masukkan salah, silahkan ulangin atau ketik /exit untuk memulai pertanyaan baru";
-		}
-		else {
-			resetPercakapan($userId);
 		}
 
 		if ($jawaban == "init") {
@@ -491,15 +485,51 @@ if($message['type']=='text'){
 			$jawaban = "Masukkan kota asal anda";
 		}
 
-		$balas = array(
-			'replyToken' => $replyToken,                                                        
-			'messages' => array(
-				array(
-					'type' => 'text',                   
-					'text' => $jawaban
+		if ($jawaban != "") {
+			$balas = array(
+				'replyToken' => $replyToken,                                                        
+				'messages' => array(
+					array(
+						'type' => 'text',                   
+						'text' => $jawaban
+					)
 				)
-			)
-		);
+			);
+		}
+
+		else {
+			$balas = array(
+				'replyToken' => $replyToken,                                                        
+				'messages' => array(
+					array (
+						'type' => 'template',
+						'altText' => 'this is a confirm template',
+						'template' => 
+						array (
+						  'type' => 'confirm',
+						  'text' => "Maaf yang anda masukkan salah, ingin memulai pertanyaan baru ?",
+						  'actions' => 
+						  array (
+							0 => 
+							array (
+							  'type' => 'message',
+							  'label' => 'Ya',
+							  'text' => "/exit",
+							),
+							1 => 
+							array (
+							  'type' => 'message',
+							  'label' => 'Tidak',
+							  'text' => $keyword,
+							),
+						  ),
+						),
+					  )
+				)
+			);
+		}
+
+		
 		$client->replyMessage($balas);
 		saveHistory($userId, $profil->displayName, $keyword, $jawaban);
 	}

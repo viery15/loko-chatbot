@@ -122,25 +122,33 @@ if($message['type']=='text'){
 			}
 			else {
 				$msg = "Kota yang anda cari tidak tersedia, ingin memulai pertanyaan baru ?";
+
 				$balas = array(
-					'replyToken' => $replyToken,
+					'replyToken' => $replyToken,                                                        
 					'messages' => array(
-						array(
-							'type' => 'confirm',
-							'text' => $msg,
-							'action' => array(
-								"type"=> "message",
-								"label"=> "Yes",
-								"text"=> "yes"
-							),
-							array(
-								"type"=> "message",
-								"label"=> "No",
-								"text"=> "no"
-							)
+						array (
+							'type' => 'template',
+							"altText"=> "this is a confirm template",
+							'template' => 
+								array (
+									'type' => 'confirm',
+									'text' => $msg,
+									'action' => 
+										array(
+											"type"=> "message",
+											"label"=> "Yes",
+											"text"=> "yes"
+										),
+										array(
+											"type"=> "message",
+											"label"=> "No",
+											"text"=> "no"
+										)
+								),
 						)
 					)
 				);
+
 			}
 
 			$client->replyMessage($balas);

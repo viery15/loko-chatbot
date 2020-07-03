@@ -117,20 +117,51 @@ if($message['type']=='text'){
 			if($stasiun_awal != 'stasiun tidak ditemukan'){
 				tambahStasiunAsal($stasiun_awal, $userId);
 				$msg = "Masukkan kota tujuan";
+				$balas = array(
+					'replyToken' => $replyToken,
+					'messages' => array(
+						array(
+							'type' => 'text',
+							'text' => $msg
+						)
+					)
+				);
 			}
 			else {
-				$msg = "Stasiun yang anda cari tidak tersedia";
+				$msg = "Stasiun yang anda cari tidak tersedia, ingin memulai pertanyaan baru ?";
+				$prev_msg = reAsk($userId);
+
+				$balas = array(
+					'replyToken' => $replyToken,                                                        
+					'messages' => array(
+						array (
+							'type' => 'template',
+							'altText' => 'this is a confirm template',
+							'template' => 
+							array (
+							  'type' => 'confirm',
+							  'text' => $msg,
+							  'actions' => 
+							  array (
+								0 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Ya',
+								  'text' => "/exit",
+								),
+								1 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Tidak',
+								  'text' => $prev_msg,
+								),
+							  ),
+							),
+						  )
+					)
+				);
 			}
 
-			$balas = array(
-				'replyToken' => $replyToken,
-				'messages' => array(
-					array(
-						'type' => 'text',
-						'text' => $msg
-					)
-				)
-			);
 			$client->replyMessage($balas);
 			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}
@@ -176,7 +207,7 @@ if($message['type']=='text'){
 								1 => 
 								array (
 								  'type' => 'message',
-								  'label' => 'No',
+								  'label' => 'Tidak',
 								  'text' => $prev_msg,
 								),
 							  ),

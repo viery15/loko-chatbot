@@ -89,6 +89,19 @@
         $row = pg_fetch_array($result);
         $kota = $row['value'];
 
+        $sinonim_stasiun = array(
+            ['surabaya gubeng', 'sgu', 'gubeng', 'gbng'],
+            ['malang', 'ml', 'ML', 'mlg']
+        );
+
+        for ($j=0; $j < count($sinonim_stasiun) ; $j++) { 
+            for ($k=0; $k < count($sinonim_stasiun[$j]); $k++) { 
+                if ($input == $sinonim_stasiun[$j][$k]) {
+                    $input = $sinonim_stasiun[$j][0];
+                }
+            }
+        }
+
         foreach ($data['data']['kota'] as $key => $value) {
             for ($i=0; $i < count($data['data']['kota'][$kota]['stasiun']); $i++) { 
                 if($data['data']['kota'][$kota]['stasiun'][$i]['nama'] == $input || $i+1 == $input){

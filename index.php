@@ -498,6 +498,7 @@ if($message['type']=='text'){
 		}
 
 		else {
+			resetPercakapan($userId);
 			$prev_msg = getHistory($userId);
 			$balas = array(
 				'replyToken' => $replyToken,                                                        

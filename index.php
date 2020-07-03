@@ -335,17 +335,57 @@ if($message['type']=='text'){
 		}
 
 		elseif($status['jenis'] == 'kursi dewasa'){
-			tambahKursiAnak($keyword, $userId);
-			$msg = "Masukkan tanggal keberangkatan (Contoh: 19-11-2019)";
-			$balas = array(
-				'replyToken' => $replyToken,                                                        
-				'messages' => array(
-					array(
-						'type' => 'text',                   
-						'text' => $msg
+
+			if(is_numeric($keyword) && $keyword >= 0){
+				tambahKursiAnak($keyword, $userId);
+				$msg = "Masukkan tanggal keberangkatan (Contoh: 19-11-2019)";
+				$balas = array(
+					'replyToken' => $replyToken,                                                        
+					'messages' => array(
+						array(
+							'type' => 'text',                   
+							'text' => $msg
+						)
 					)
-				)
-			);
+				);
+			}
+
+			else {
+				$msg = "Jumlah yang anda masukkan salah. ingin memulai pertanyaan baru ?";
+				$prev_msg = reAsk($userId);
+
+				$balas = array(
+					'replyToken' => $replyToken,                                                        
+					'messages' => array(
+						array (
+							'type' => 'template',
+							'altText' => 'this is a confirm template',
+							'template' => 
+							array (
+							  'type' => 'confirm',
+							  'text' => $msg,
+							  'actions' => 
+							  array (
+								0 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Ya',
+								  'text' => "/exit",
+								),
+								1 => 
+								array (
+								  'type' => 'message',
+								  'label' => 'Tidak',
+								  'text' => $prev_msg,
+								),
+							  ),
+							),
+						  )
+					)
+				);
+			}
+
+			
 			$client->replyMessage($balas);
 			saveHistory($userId, $profil->displayName, $keyword, $msg);
 		}

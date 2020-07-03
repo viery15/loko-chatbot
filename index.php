@@ -57,10 +57,10 @@ if($message['type']=='text'){
 
 	else if(is_array($status)){
 		if($status['jenis'] == 'init'){
-			$status_kota = cekKota($keyword);
-			if($status_kota == 'tersedia'){
-				tambahKotaAsal($userId, $keyword);
-				$stasiun = dataStasiun($keyword);
+			$kota_awal = cekKota($keyword);
+			if($kota_awal != 'kota tidak ditemukan'){
+				tambahKotaAsal($userId, $kota_awal);
+				$stasiun = dataStasiun($kota_awal);
 				$msg = "Masukkan stasiun asal\n\n" . $stasiun;
 			}
 			else {
@@ -105,10 +105,10 @@ if($message['type']=='text'){
 		}
 
 		elseif($status['jenis'] == 'stasiun asal'){
-			$status_kota = cekKota($keyword);
-			if($status_kota == 'tersedia'){
-				tambahKotaTujuan($keyword, $userId);
-				$stasiun = dataStasiun($keyword);
+			$kota_tujuan = cekKota($keyword);
+			if($kota_tujuan != 'kota tidak ditemukan'){
+				tambahKotaTujuan($kota_tujuan, $userId);
+				$stasiun = dataStasiun($kota_tujuan);
 				$msg = "Masukkan stasiun tujuan\n\n" . $stasiun;
 			}
 			else {

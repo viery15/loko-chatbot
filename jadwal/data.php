@@ -88,7 +88,7 @@
 
         foreach ($data['data']['kota'] as $key => $value) {
             if($kota == $key){
-                $response = "tersedia";
+                $response = $kota;
             }
         }
         return $response;

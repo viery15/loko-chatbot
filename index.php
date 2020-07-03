@@ -122,6 +122,7 @@ if($message['type']=='text'){
 			}
 			else {
 				$msg = "Kota yang anda cari tidak tersedia, ingin memulai pertanyaan baru ?";
+				$prev_msg = reAsk($userId);
 
 				$balas = array(
 					'replyToken' => $replyToken,                                                        
@@ -145,7 +146,7 @@ if($message['type']=='text'){
 								array (
 								  'type' => 'message',
 								  'label' => 'No',
-								  'text' => 'no',
+								  'text' => $prev_msg,
 								),
 							  ),
 							),
@@ -371,6 +372,20 @@ function saveHistory($userId, $nama, $input, $output){
 	$tanggal = date("d-m-Y");
 	$sql = "INSERT INTO chatbot.history (user_id, nama, input, tanggal, output) VALUES ('". $userId ."','". $nama ."','". $input ."','". $tanggal ."','". $output ."')";
 	$result = pg_query($connect, $sql);
+}
+
+function reAsk($userId){
+	include "/app/db.php";
+	$sql = "SELECT * FROM chatbot.jadwal WHERE id_user='".$userId."' ORDER BY id DESC";
+	$result = pg_query($connect, $sql);
+	$row = pg_fetch_array($result);
+	$jenis = $row['jenis'];
+
+	$sql2 = "DELETE FROM chatbot.jadwal WHERE id_user='$userId' AND jenis='$jenis'";
+	$result2 = pg_query($connect, $sql2);
+
+
+	return $row['value'];
 }
 
 ?>

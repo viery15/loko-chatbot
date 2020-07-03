@@ -498,6 +498,7 @@ if($message['type']=='text'){
 		}
 
 		else {
+			$prev_msg = getHistory($userId);
 			$balas = array(
 				'replyToken' => $replyToken,                                                        
 				'messages' => array(
@@ -520,7 +521,7 @@ if($message['type']=='text'){
 							array (
 							  'type' => 'message',
 							  'label' => 'Tidak',
-							  'text' => $keyword,
+							  'text' => $prev_msg,
 							),
 						  ),
 						),
@@ -529,7 +530,6 @@ if($message['type']=='text'){
 			);
 		}
 
-		
 		$client->replyMessage($balas);
 		saveHistory($userId, $profil->displayName, $keyword, $jawaban);
 	}
@@ -645,6 +645,15 @@ function validateDate($date, $format = 'd-m-Y')
     $d = DateTime::createFromFormat($format, $date);
     
     return $d && $d->format($format) === $date;
+}
+
+function getHistory($userId){
+	include "/app/db.php";
+	$sql = "SELECT * FROM chatbot.history WHERE user_id='".$userId."' ORDER BY id DESC LIMIT 1";
+	$result = pg_query($connect, $sql);
+	$row = pg_fetch_array($result);
+
+	return $row['input'];
 }
 
 ?>

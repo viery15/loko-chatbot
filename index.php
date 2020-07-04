@@ -22,7 +22,7 @@ if($message['type']=='text'){
 	$status = cekInit($userId);
 	$status_temp = cekTemp($userId);
 
-	if($keyword == 'jadwal dong' || $keyword == 'mau tanya jadwal'){
+	if($keyword == 'cek jadwal' || $keyword == 'mau tanya jadwal'){
 		init($userId);
 		$msg = "Masukkan kota asal anda";
 

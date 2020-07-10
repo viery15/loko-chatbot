@@ -215,7 +215,7 @@
             
 
             $output = "";
-            for ($i=0; $i < 10; $i++) {
+            for ($i=0; $i < 6; $i++) {
                 // if ($data[$i]->status != "PENUH") {
                 $output .= $i+1 . ". " . $data[$i]->train . " (" . $data[$i]->status . ")" . "\n";
 

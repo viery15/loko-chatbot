@@ -338,7 +338,7 @@ if($message['type']=='text'){
 
 			if(is_numeric($keyword) && $keyword >= 0){
 				tambahKursiAnak($keyword, $userId);
-				$msg = "Masukkan tanggal keberangkatan (dd-mm-yyy)";
+				$msg = "Masukkan tanggal keberangkatan (yyyy-mm-dd)";
 				$balas = array(
 					'replyToken' => $replyToken,                                                        
 					'messages' => array(

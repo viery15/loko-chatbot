@@ -641,7 +641,7 @@ function reAsk($userId){
 	return $row['value'];
 }
 
-function validateDate($date, $format = 'd-m-Y')
+function validateDate($date, $format = 'Y-m-d')
 {
     $d = DateTime::createFromFormat($format, $date);
     
